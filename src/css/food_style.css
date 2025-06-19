@@ -1,0 +1,67 @@
+
+/* Root pane background with dark color */
+.root {
+    -fx-background-color: #1C1F21;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-text-fill: #E0E0E0; /* light gray text */
+}
+
+/* Label styling */
+.label {
+    -fx-text-fill: #E0E0E0; /* light text */
+    -fx-font-size: 14px;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #2C2F33; /* slightly lighter dark */
+    -fx-text-fill: #E0E0E0;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16 8 16;
+    -fx-border-color: #444;
+    -fx-border-radius: 6;
+}
+
+.button:hover {
+    -fx-background-color: #3C3F43;
+}
+
+/* TextField styling */
+.text-field {
+    -fx-background-color: #2C2F33;
+    -fx-text-fill: #E0E0E0;
+    -fx-prompt-text-fill: #888;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #444;
+}
+
+/* FlowPane container for cards */
+.flow-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+}
+
+/* Card styling */
+.anchor-pane {
+    -fx-background-color: #2C2F33;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 5, 0, 0, 1 );
+}
+
+/* ImageView styling inside card (optional) */
+.image-view {
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.8) , 8, 0, 0, 2 );
+    -fx-background-radius: 6;
+}
+
+/* ScrollPane styling */
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}

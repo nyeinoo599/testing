@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="299.0" prefWidth="277.0" style="-fx-background-color: #1C1F21; -fx-border-color: #494949; -fx-border-radius: 8; -fx-background-radius: 8;" stylesheets="@../css/food_style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Food_cardController">
+   <children>
+       <Button fx:id="editBtn" layoutX="173.0" layoutY="237.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: #3b3b3b; -fx-text-fill: white;" text="Edit" />
+
+       <ImageView fx:id="imageView" fitHeight="122.0" fitWidth="200.0" layoutX="71.0" layoutY="19.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/oishi.jpg" />
+         </image></ImageView> <Label fx:id="nameLabel" layoutX="30.0" layoutY="160.0" prefHeight="27.0" prefWidth="200.0" stylesheets="@../css/food_style.css" text="Name" textFill="white">
+           <font><Font size="18" /></font>
+       </Label>
+       <Label fx:id="priceLabel" layoutX="30.0" layoutY="197.0" prefHeight="25.0" prefWidth="200.0" text="Price" textFill="white">
+           <font><Font size="16" /></font>
+       </Label>
+
+   </children>
+</AnchorPane>

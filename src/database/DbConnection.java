@@ -1,34 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package database;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
-/**
- *
- * @author MITUSER-1
- */
 public class DbConnection {
-    
-    public Connection getConnection() throws ClassNotFoundException{
-        Connection con=null;
-        String username="root";
-        String password="";
-        String url="jdbc:mysql://localhost:3306/internet_cafe";
-        
-       Class.forName("com.mysql.cj.jdbc.Driver");
-        System.out.println("Load Driver.......");
-        
-        try{
-        con =DriverManager.getConnection(url, username, password);
-        System.out.println("database connected");
-        }catch(SQLException ex){
-            System.out.println("not connect");
+
+    private static final String URL = "jdbc:mysql://localhost:3306/internet_cafe";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "";
+
+    static {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            System.out.println("MySQL JDBC Driver Loaded");
+        } catch (ClassNotFoundException e) {
+            System.err.println("Failed to load JDBC driver");
+            e.printStackTrace();
+        }
     }
-    return con;
-}
+
+    public static Connection getConnection() throws SQLException {
+        System.out.println("Connecting to database...");
+        return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+    }
 }
